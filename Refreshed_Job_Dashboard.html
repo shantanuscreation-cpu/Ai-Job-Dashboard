@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refreshed AI Job Dashboard | 92% Resume Match</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #030305;
+            --accent: #7c3aed;
+            --accent-light: #a855f7;
+            --text-main: #f3f4f6;
+            --text-dim: #9ca3af;
+            --glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            padding: 40px 20px;
+            background-image: radial-gradient(circle at 10% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; }
+        header { margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+        h1 { font-family: 'Outfit', sans-serif; font-size: 2.5rem; background: linear-gradient(to right, #fff, var(--accent-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        .profile-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .score-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-light);
+            flex-shrink: 0;
+        }
+
+        .strengths-gaps { flex-grow: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .list-title { font-size: 0.8rem; text-transform: uppercase; color: var(--accent-light); letter-spacing: 1px; margin-bottom: 8px; }
+        .list { list-style: none; font-size: 0.9rem; color: #d1d5db; }
+        .list li::before { content: '✓ '; color: var(--accent); }
+
+        .job-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 20px; }
+        .job-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.2s, border-color 0.2s;
+            cursor: pointer;
+        }
+        .job-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .job-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; }
+        .job-company { color: var(--accent-light); font-size: 0.9rem; margin-bottom: 12px; }
+        .job-snippet { font-size: 0.85rem; color: var(--text-dim); line-height: 1.5; margin-bottom: 20px; height: 3.2em; overflow: hidden; }
+        .match-tag { display: inline-block; padding: 4px 12px; border-radius: 99px; background: rgba(124, 58, 237, 0.2); font-size: 0.75rem; color: #fff; font-weight: 600; }
+        .btn-apply { display: block; width: 100%; text-align: center; background: var(--accent); color: #fff; text-decoration: none; padding: 12px; border-radius: 8px; margin-top: 15px; font-weight: 600; transition: background 0.2s; }
+        .btn-apply:hover { background: var(--accent-light); }
+
+        .links { margin-top: 40px; text-align: center; font-size: 0.9rem; color: var(--text-dim); }
+        .links a { color: var(--accent-light); text-decoration: none; margin: 0 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>AI Job Dashboard (Refreshed)</h1>
+            <p style="color: var(--text-dim)">Latest Senior PM Openings with 90%+ Match Score</p>
+        </header>
+
+        <div class="profile-card">
+            <div class="score-circle">92%</div>
+            <div class="strengths-gaps">
+                <div>
+                    <div class="list-title">Key Strengths</div>
+                    <ul class="list">
+                        <li>Product Strategy & Roadmap</li>
+                        <li>Product Lifecycle (0 to 1)</li>
+                        <li>North Star Metrics / KPIs</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="list-title">Minor Gaps</div>
+                    <ul class="list">
+                        <li>SQL / Data Analysis Tools</li>
+                        <li>Mobile UI/UX Specifics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="job-grid">
+            <div class="job-card" onclick="window.open('https://www.foundit.in/job/senior-product-manager-microsoft-bengaluru-bangalore-44245976')">
+                <div class="job-title">Senior Product Manager</div>
+                <div class="job-company">Microsoft • Bangalore</div>
+                <div class="job-snippet">Drive product strategy and execution for AI systems. Lead cross-functional teams for global launches...</div>
+                <span class="match-tag">92% Match</span>
+                <a href="https://www.foundit.in/job/senior-product-manager-microsoft-bengaluru-bangalore-44245976" class="btn-apply" target="_blank">Apply Now</a>
+            </div>
+
+            <div class="job-card" onclick="window.open('https://www.foundit.in/job/senior-product-manager-amazon-bengaluru-bangalore-44266941')">
+                <div class="job-title">Senior Product Manager</div>
+                <div class="job-company">Amazon • Bangalore</div>
+                <div class="job-snippet">Lead "0 to 1" product incubation for AI systems. Focus on customer obsession and scalable roadmaps...</div>
+                <span class="match-tag">90% Match</span>
+                <a href="https://www.foundit.in/job/senior-product-manager-amazon-bengaluru-bangalore-44266941" class="btn-apply" target="_blank">Apply Now</a>
+            </div>
+
+            <div class="job-card" onclick="window.open('https://in.linkedin.com/jobs/view/senior-product-manager-genai-at-ge-vernova-4348414139')">
+                <div class="job-title">Senior Product Manager - GenAI</div>
+                <div class="job-company">GE Vernova • Bangalore</div>
+                <div class="job-snippet">Drive GenAI product innovation for energy systems. Align roadmap with strategic business goals...</div>
+                <span class="match-tag">94% Match</span>
+                <a href="https://in.linkedin.com/jobs/view/senior-product-manager-genai-at-ge-vernova-4348414139" class="btn-apply" target="_blank">Apply Now</a>
+            </div>
+
+            <div class="job-card" onclick="window.open('https://in.linkedin.com/jobs/view/product-management-ic5-at-microsoft-ai-4378763618')">
+                <div class="job-title">Product Management IC5</div>
+                <div class="job-company">Microsoft AI • Bangalore</div>
+                <div class="job-snippet">Senior level product management for AI core systems. Stakeholder influence and strategic planning...</div>
+                <span class="match-tag">91% Match</span>
+                <a href="https://in.linkedin.com/jobs/view/product-management-ic5-at-microsoft-ai-4378763618" class="btn-apply" target="_blank">Apply Now</a>
+            </div>
+
+            <div class="job-card" onclick="window.open('https://in.linkedin.com/jobs/view/product-manager-technical-business-data-technologies-at-amazon-4387465106')">
+                <div class="job-title">Product Manager Technical</div>
+                <div class="job-company">Amazon • Bangalore</div>
+                <div class="job-snippet">Search and Data Intelligence Agent platforms. Define technical requirements and PRDs...</div>
+                <span class="match-tag">89% Match</span>
+                <a href="https://in.linkedin.com/jobs/view/product-manager-technical-business-data-technologies-at-amazon-4387465106" class="btn-apply" target="_blank">Apply Now</a>
+            </div>
+
+            <div class="job-card" onclick="window.open('https://www.iimjobs.com/k/ai-product-management-jobs')">
+                <div class="job-title">AI Product Management roles</div>
+                <div class="job-company">iimjobs • Multi-company</div>
+                <div class="job-snippet">Premium AI Product Management job openings with high salary details (45L+). Senior tiers...</div>
+                <span class="match-tag">88% Match</span>
+                <a href="https://www.iimjobs.com/k/ai-product-management-jobs" class="btn-apply" target="_blank">Apply Now</a>
+            </div>
+        </div>
+
+        <div class="links">
+            <p>Ready to apply?</p>
+            <a href="file:///Users/santausarker/Library/Mobile%20Documents/com~apple~CloudDocs/job-dashboard/Senior_PM_Resume.html">View Premium Resume</a> | 
+            <a href="file:///Users/santausarker/Library/Mobile%20Documents/com~apple~CloudDocs/Santanu_Sarker_Resume_AI_Architect.md">View Markdown Resume</a>
+        </div>
+    </div>
+
+</body>
+</html>
